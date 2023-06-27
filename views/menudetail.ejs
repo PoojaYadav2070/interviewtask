@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>
+detail
+    </title>
+</head>
+
+<body>
+
+    <section class="Delivery_tabs">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-10">
+                    <div class="prfoiles_section2">
+
+                   
+                            <div class="row first_box mt-3">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Menu Name</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" name="name" value="<%=menu_parent.name%>" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Menu type</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" name="menu_type" value="<%=menu_parent.menu_type%>" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+<br>
+
+                                
+                               
+                       <br>
+                            
+                               
+
+                               
+                                <%if(detail.length>0){%>
+                                    <%detail.forEach((data,i)=> {%>
+                                    <div class="row">
+                                       category <input type="text" name="category" value="<%=data.category%>">
+                                        <input type="text" name="feature" value="<%=data.feature%>">
+                                        <button type="button">
+                                            <a href="/users/edit/detail/<%=data.id%>">Edit</a></button>
+                                           
+                                            <button type="button"><a href="/users/delete/detail/<%=data.id%>">Delete</a></button>
+      
+                                      </div>
+                                      
+                                      <br>
+                                      <%})%>
+                                     
+
+                                <%}else{%>
+                                    no specification assigned
+                                    <%}%>
+
+                              
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Slug</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control"  name="slug" value="<%=menu_parent.slug%>">
+                                        </div>
+                                    </div>
+                                </div>
+                       
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+    
+
+
+
+
+
+
+
+
+
+
+
+
